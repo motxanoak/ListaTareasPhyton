@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\mostrar1.css' %}">
+    <title>lista de Tareas</title>
+</head>
+<body>
+    {% include 'navlista.html' %}
+    <h1>¡Lista de Tareas!</h1>
+    <form method="post" action="{% url 'mostrar' %}">
+        {% csrf_token %}
+        {% for item in lista.values %}
+        <div class="Tarea">
+            <p class="nombre">{{item.serie}}.{{ item.title }}</p>
+            <div class="atributos">
+                <div class="info">
+                    <p class="boldfisrt">Note:
+                        <span class="light">{{ item.note }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="boldfisrt">Status:
+                        <span class="light">{{ item.status }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="bold">Date:
+                        <span class="light">{{ item.date }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="bold">Deadline:
+                        <span class="light">{{ item.deadline }}</span>
+                    </p>
+                </div>
+                <div class="checkbox">
+                    <label for="id.{{ item.title }}">COMPLETAR</label><br>
+                    <!-- <input type="hidden" name="id" value="{{ item.title }}"> -->
+                    <input type="checkbox" id="{{ item.title }}" name="id.{{ item.title }}" value="Completado"><br><br>
+                </div>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+        <div class="submitButton">
+            <input type="submit" value="Actualizar">
+        </div>
+        
+    </form>
+</body>
+
+</html>

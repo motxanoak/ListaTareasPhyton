@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\mostrar1.css' %}">
+    <title>Historial</title>
+</head>
+<body>
+    {% include 'navhistorial.html' %}
+    <h1>¡Historial de Tareas!</h1>   
+        {% csrf_token %}
+        {% for item in lista.values %}
+        <div class="Tarea">
+            <p class="nombre">{{item.serie}}.{{ item.title }}</p>
+            <div class="atributos">
+                <div class="info">
+                    <p class="boldfisrt">Note:
+                        <span class="light">{{ item.note }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="boldfisrt">Status:
+                        <span class="light">{{ item.status }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="bold">Date:
+                        <span class="light">{{ item.date }}</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="info">
+                    <p class="bold">Deadline:
+                        <span class="light">{{ item.deadline }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        {% endfor %}        
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+*{
+    font-family: sans-serif;
+    background-color: #8ECAE6;
+    
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+    margin: 20px auto 20px auto;
+    color:  #023047;
+}
+
+hr{
+    border: 1px solid #023047;
+    border-radius: 5px;
+}
+.Tarea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nombre{
+    max-width: 450px;
+    display: flex;
+    border-top-left-radius: 20px ; 
+    border-top-right-radius: 20px ; 
+    background-color:#023047;
+    color: white;
+    margin: auto;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.atributos{
+    margin: 0 auto auto auto;
+    max-width: 450px;
+    background-color: white;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+
+
+    
+    
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:400;
+    font-size: 1.16em;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    background-color:#023047;
+    color: white;
+}
+label{
+    background-color:#023047;
+    color: white;
+
+}
+.boldfisrt{ 
+       font-size: 1.16em;
+    min-width: 25%;
+    max-width: 100%;
+    display: flex;
+    font-weight: bold;
+    padding: 10px 10px 5px 10px;
+    margin: 0 auto 0px auto;
+background-color: white;
+    justify-content: space-between;
+    color: #023047;
+    
+}
+.bold{
+    font-size: 1.16em;
+    min-width: 25%;
+    max-width: 100%;
+    display: flex;
+    font-weight: bold;
+    padding: 0px 10px 0 10px;
+    margin: 0 auto 10px auto;
+    background-color: white;
+    justify-content: space-between;
+    color: #023047;
+    
+}
+.light{
+   
+    min-width: 75%;
+    text-align: justify;
+    font-weight: lighter;
+    background-color: white;
+}
+
+input[type="checkbox"] {
+    /* appearance: none;
+    
+    margin: 0;
+    font: inherit; */
+    background-color: #023047;
+    color: white; 
+    width: 1.30em;
+    height: 1.30em;
+    border: 0.16em solid white;
+    border-radius: 0.16em;
+    transform: translateY(-0.075em);
+  }
+  .submitButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  input[type="submit"] {
+    /* appearance: none;
+    margin: 0;
+    font: inherit; */
+    margin: auto;
+    font-size: 1.16em;
+    background-color: white;
+    color: #023047; 
+    width: 6em;
+    height: 2em;
+    border: 0.16em solid #023047;
+    border-radius: 0.16em;
+    transform: translateY(-0.075em);   
+  }
+
+  nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #023047;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+nav ul li a:hover {
+    background-color: #76a0b3;
+}
+

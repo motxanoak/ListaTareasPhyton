@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\crear1.css' %}">
+    <title>Crear Tarea</title>
+</head>
+<body>
+    {% include 'navcrear.html' %}
+    <h1>Crear Nueva Tarea</h1>
+    <!-- <p>{{userTime}}</p> -->
+    <form method="post" action="{% url 'crear' %}">
+        {% csrf_token %}
+        <div class="entrada">
+                <label for="title">Titulo</label>
+                <input type="text" id="title" name="title">
+        </div>
+        <div class="entrada">
+            <label for="note">Nota</label>
+            <textarea id="note" name="note"></textarea>
+        </div>
+        <div class="entrada">
+            <label for="date">Date</label><br>
+            <input type="date" id="date" name="date" min="{{userTime}}">
+        </div>
+        <div class="submitButton">
+            <input type="submit" value="Crear">
+        </div>
+        
+    </form>
+</body>
+</html>
